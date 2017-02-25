@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <style>
+        .form-signin {
+            max-width: 500%;
+
+            padding: 15px 35px 45px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 3px 3px 6px #999;
+        }
+    </style>
+    <div class="right_col" role="main">
+            <div class="page-title">
+                <div class="title_left">
+                   <h3>Modulo Interesados <small>registra un nuevo interesado</small></h3>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="clearfix"></div>
+                </br>
+                <div class="col-md-2"></div>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="x_panel form-signin ">
+                        <div class="x_title">
+                           <h2>Actualizar Interesado
+                            </h2>
+
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                               <!-- <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>-->
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <div class="x_content">
+
+                            <p>Llene los campos correspondientes
+                                <strong>Nombres, Apellidos y Correo</strong>
+                                , </n> luego de llenar los campos
+                                <strong>CLIC</strong>
+                                en el boton REGISTRAR
+                            </p>
+                            <br>
+                            <form class="form-horizontal form-label-left" action="{{ path('inscripcion_interesado_update')}}" method="post">
+                                <div class="form-group" hidden>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Nombres :</label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input type="text" id="idinte" value="{{ datosEdit.id }}" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Nombres :</label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input type="text" id="nombresinte" value="{{ datosEdit.inteNombres }}" class="form-control" placeholder="Ingrese Nombre">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Apellidos :</label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input type="text" id="apellidosinte" class="form-control"  value="{{ datosEdit.inteApellidos }}"  placeholder="Ingrese Apellidos">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Correo :</label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input type="email" id="correointe" class="form-control" value="{{ datosEdit.inteCorreo }}" placeholder="Ingrese Correo">
+                                    </div>
+                                </div>
+
+                              <!--  <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Tipo :</label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <select id="cbocat" class="form-control">
+                                            <option value="0">Seleccionar</option>
+                                            <option value="interesado">Interesado</option>
+                                            <option value="cliente">Cliente</option>
+                                        </select>
+                                    </div>
+                                </div>-->
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                        <button type="submit" class="btn btn-warning">Registrar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        //$('#cbocat').val('{{ datosEdit.inteTipo }}');
+    </script>
+{% endblock %}

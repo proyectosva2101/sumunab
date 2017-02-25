@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content %}
+    <style>
+        .form-signin {
+            max-width: 500%;
+
+            padding: 15px 35px 45px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 3px 3px 6px #999;
+        }
+    </style>
+    <div class="right_col" role="main">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Lista Interesado <small>Some examples to get you started</small></h3>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="clearfix"></div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel form-signin">
+                        <div class="x_title">
+                            <h2>Lista total <small>Interesado</small></h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <a href="{{ path('inscripcion_interesado_nuevo') }}" class="btn btn-warning btn-sm pull-right">  <span class="glyphicon glyphicon-plus">
+
+                                    </span> Nuevo </a>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <p class="text-muted font-13 m-b-30">
+                                {% for flashMessage in app.session.flashbag.get('Mensaje') %}
+                            <div class="alert alert-success">
+                                <div class="container">
+                                    <strong>Correcto!</strong> {{ flashMessage }}
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% for flashMessage in app.session.flashbag.get('MensajeError') %}
+                                <div class="alert alert-danger">
+                                    <div class="container">
+                                        <strong>Atencion!</strong> {{ flashMessage }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            </p>
+                            <div id="datatable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table id="datatable" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
+
+
+                                            <thead>
+                                            <tr role="row">
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 160px;">Nombres</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 261px;">Apellidos</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 118px;">Correo</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 118px;">Tipo</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 118px;">Acciones</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+                                            {% set lists =  app.session.get('listInte') %}
+                                            {% for list in lists %}
+                                            <tr role="row">
+                                                <td>{{ list.inte_nombres }}</td>
+                                                <td>{{ list.inte_apellidos }}</td>
+                                                <td>{{ list.inte_correo }}</td>
+                                                <td><strong>{{ list.inte_tipo }}</strong></td>
+                                                <td class="actions">
+                                                    <a href="{{ path('inscripcion_interesado_editar',{id: list.id_inte}) }}" class="btn btn-sm btn-primary" title="Editar">
+                                                        <span class="glyphicon glyphicon-pencil"></span>
+                                                    </a>
+
+                                                    <a href="" class="btn btn-sm btn-success btn-trash" title="inscribes">
+                                                        <span class="glyphicon glyphicon-ok"></span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function() {
+            $('#datatable').dataTable({});
+            });
+
+
+    </script>
+{% endblock %}

@@ -1,0 +1,239 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <style>
+        .form-signin {
+            max-width: 500%;
+
+            padding: 15px 35px 45px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 3px 3px 6px #999;
+        }
+    </style>
+    <div class="right_col" role="main">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>HISTORIAL ACADÉMICO</h3>
+            </div>
+
+            <div class="row">
+                <div class="clearfix"></div>
+                </br>
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="x_panel form-signin ">
+                        <div class="x_title">
+                            <h2>
+                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-user emerald-bg"></i></a>
+                                Información personal académica
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
+                                </li>                               
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="main-box infographic-box clearfix">
+                                {#<div class="main-box-header clearfix">
+                                    <a href="perfil.htm?s=inf"><i class="fa fa-user emerald-bg"></i></a>
+                                    <span class="headline">
+                                        <a> href="perfil.htm?s=inf">
+                                            Información Personal Académica
+                                        </a>
+                                    </span>
+                                </div>#}
+                                <div>
+                                    <p class="text-muted">Datos Registrados en la Base de Datos</p>                        
+                                    <ul>
+                                        <li>Nombre, Fecha y Lugar de Nacimiento, Estado Civil,Sexo</li>
+                                        <li>Domicilio, Teléfono y Correo Electrónico</li>
+                                        <li>Facultad, Programa Académico, Especialidad</li>
+{#                                        <li>Plan de Estudios, &nbsp;Año y Modalidad de Ingreso</li>#}
+{#                                        <li>Situación Académica y Estado de Permanencia</li>#}
+{#                                        <li>Promedio Ponderado, Número de Períodos Matriculados</li>#}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="x_panel form-signin ">
+                        <div class="x_title">
+                            <h2>
+                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-bar-chart-o emerald-bg"></i></a>
+                                Historial académico y calificaciones
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
+                                </li>                               
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="main-box infographic-box clearfix">
+                                <div>
+                                    <p class="text-muted">Matrículas Registradas y Resumen de Creditaje Aprobado</p>
+                                    <ul>
+                                        <li>Períodos Académicos Matriculados, Plan de Estudios</li>
+                                        <li>Ciclo, Asignatura, Creditaje, Tipo Asignatura</li>
+                                        <li>Calificación, Sección, &nbsp;Tipo y Número de Acta</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="x_panel form-signin ">
+                        <div class="x_title">
+                            <h2>
+                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-globe red-bg"></i></a>
+                                Matrícula vía internet
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
+                                </li>                               
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="main-box infographic-box clearfix">
+                                <div>
+                                    <p class="text-muted">Acceso al Módulo de Controles y Proceso de Matrícula</p>
+                                    <ul>
+                                        <li>Período Académico Vigente</li>
+                                        <li>Fecha, Usuario, Tipo de Matrícula</li>
+                                        <li>Ciclo/Año, Código, Nombre, Tipo Asignatura</li>
+                                        <li>Sección Matriculada, Docente</li>
+                                        <li>Total de Cursos y Créditos Matriculados</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                </br>
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="x_panel form-signin ">
+                        <div class="x_title">
+                            <h2>
+                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-calendar red-bg"></i></a>
+                                Programación de cursos
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
+                                </li>                               
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="main-box infographic-box clearfix">
+                                <div>
+                                    <p class="text-muted">Asignaturas, Secciones y Horarios Programados</p>
+                                    <ul>
+                                        <li>Asignatura, Creditaje, Horas Teoría, Práctica, Laboratorio</li>
+                                        <li>Sección, Docente, Turno, Aula, Horario</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="x_panel form-signin ">
+                        <div class="x_title">
+                            <h2>
+                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-list yellow-bg"></i></a>
+                                Plan de estudios
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
+                                </li>                               
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="main-box infographic-box clearfix">
+                                <div>
+                                    <ul>
+                                        <li>Asignaturas, Creditaje y Especificaciones del Plan</li>
+                                        <li>Ciclo/Año, &nbsp;Código, Nombre, &nbsp;Tipo, Creditaje Asignatura</li>
+                                        <li>Código, Nombre Asignatura Pre-Requisito</li>
+                                        <li>Grupo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            {#<div class="clearfix"></div>
+            <div class="row">
+                <div class="clearfix"></div>
+                </br>
+                <div class="col-md-2"></div>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="x_panel form-signin ">
+                        <div class="x_title">
+                           <h2>Nuevo Interesado</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
+                                </li>                               
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <form>
+                            <form class="form-horizontal form-label-left" action="{{ path('inscripcion_interesado_add')}}" method="post">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Nombres :</label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input type="text" name="nombres" id="nombres" class="form-control" placeholder="Ingrese Nombre">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Apellidos :</label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input type="text"  name="apellidos" id="apellidos" class="form-control"  placeholder="Ingrese Apellidos">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Correo :</label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input type="email" name="correo" id="correo" class="form-control"  placeholder="Ingrese Correo">
+                                    </div>
+                                </div>
+
+
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                        <button type="submit" class="btn btn-warning">Registrar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>#}
+
+        </div>
+    </div>
+
+{% endblock %}

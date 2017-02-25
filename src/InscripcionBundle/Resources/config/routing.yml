@@ -1,0 +1,53 @@
+#inscripcion_loginpage_login:
+#    path:     /login
+#    defaults: { _controller: InscripcionBundle:Default:index }
+
+inscripcion_homepage:
+    path:     /home
+    #defaults: { _controller: InscripcionBundle:Default:home }
+    defaults: { _controller: InscripcionBundle:Interesado:inicio }
+
+historial_academico:
+    path:     /historial
+    defaults: { _controller: InscripcionBundle:Interesado:historial }
+    
+programacion_cursos:
+    path:     /programacion
+    defaults: { _controller: InscripcionBundle:Interesado:programacion }
+
+reporte_prematricula:
+    path:     /reportepre
+    defaults: { _controller: InscripcionBundle:Interesado:reportepre }
+
+reporte_matricula:
+    path:     /reporte
+    defaults: { _controller: InscripcionBundle:Interesado:reporte }
+
+    
+    
+    
+    
+    
+
+
+
+
+inscripcion_interesado_nuevo:
+    path:     /interesado/nuevo
+    defaults: { _controller: InscripcionBundle:Interesado:nuevo }
+
+inscripcion_interesado_add:
+    path:     /interesado/add
+    defaults: { _controller: InscripcionBundle:Interesado:add }
+
+inscripcion_interesado_lista:
+    path:     /interesado/lista
+    defaults: { _controller: InscripcionBundle:Interesado:lista }
+
+inscripcion_interesado_editar:
+    path:     /interesado/editar/{id}
+    defaults: { _controller: InscripcionBundle:Interesado:editar }
+
+inscripcion_interesado_update:
+    path:     /interesado/update/
+    defaults: { _controller: InscripcionBundle:Interesado:update }

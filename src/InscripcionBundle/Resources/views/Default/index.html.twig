@@ -1,0 +1,78 @@
+{% extends 'baselogin.html.twig' %}
+
+{% block content %}
+    <style>
+        body {
+            background: #2A3F54 !important;
+        }
+        .form-signin {
+            max-width: 380px;
+            max-height: 530px;
+            padding: 15px 35px 45px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 3px 3px 6px black;
+        }
+    </style>
+
+    <body class="login">
+        
+    <div>
+        <div class="login_wrapper">
+            <div class="animate form login_form form-signin">
+                
+        
+                <section class="login_content">
+                    <form id="formulariosesion" name="formulariosesion" action="{{ path('iniciar_sesion')}}" method="post" class="form-horizontal" role="form">
+                        <center>
+                            <img src="{{asset('public/images/logo.png')  }}" alt="" {#class="img-circle"#} width="170" height="100">
+                        </center>
+                        <br>
+                        <br>
+                        <div>
+                            <div class="col-md-12 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label> SISTEMA DE MATRÍCULA</label>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="col-md-12 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input id="idusuario" name="idusuario" type="text" class="form-control has-feedback-left"  placeholder="USUARIO">
+                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="col-md-12col-sm-6 col-xs-12 form-group has-feedback">
+                                <input id="idcontrasenia" name="idcontrasenia" type="password" class="form-control has-feedback-left" placeholder="CONTRASEÑA">
+                                <span class="fa fa-unlock-alt form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-md-12col-sm-6 col-xs-12 form-group has-feedback">
+                                <input id="idsesion" name="idsesion" type="submit" class="btn blue" value="INICIAR SESIÓN">
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="separator">
+                            <div class="clearfix"></div>
+
+                            <div>
+{#                                <h2><i class="fa fa-hand-rock-o"></i> Universidad Nacional de Barranca</h2>#}
+                                <p>©2017 Proyectos Tocha</p>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                        
+            </div>
+        </div>
+                        
+    </div>
+        
+    </body>
+
+{% endblock %}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}UNAB{% endblock %}</title>
+        {% block stylesheets %}
+            <title>SUM UNAB | </title>
+            <!-- Bootstrap -->
+            <link rel="stylesheet" href="{{ asset('public/vendors/bootstrap/dist/css/bootstrap.min.css')}}" >
+            <!-- Font Awesome -->
+            <link href="{{ asset('public/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+
+            <!-- iCheck -->
+            <link href="{{ asset('public/vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
+            <!-- bootstrap-progressbar -->
+            <link href="{{ asset('public/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet">
+
+            <!-- bootstrap-daterangepicker -->
+            <link href="{{ asset('public/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
+            <!-- Datatables -->
+            <link href="{{ asset('public/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
+            <link href="{{ asset('public/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')}}" rel="stylesheet">
+            <link href="{{ asset('public/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
+
+            <link href="{{ asset('public/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')}}" rel="stylesheet">
+            <!-- Custom Theme Style -->
+            <link href="{{ asset('public/build/css/custom.min.css')}}" rel="stylesheet">
+
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body class="nav-md">
+
+        {% block body %}
+            <div class="container body">
+                <div class="main_container">
+                    <div class="col-md-3 left_col">
+                        <div class="left_col scroll-view">
+                            <div class="navbar nav_title" style="border: 0;">
+                                <a href="{{ path('inscripcion_homepage') }}" img="{{ asset('public/images/logo.png') }}" class="site_title">{#<i class="fa fa-hand-rock-o"></i>#} <span>SUM UNAB</span></a>
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                            <!-- menu profile quick info -->
+                            <div class="profile clearfix">
+                                <div class="profile_pic">
+                                    <img src="{{ asset('public/images/logo.png') }}" alt="..." {#class="img-circle profile_img"#}>
+                                </div>
+                                <div class="profile_info">
+                                    <span>Bienvenido</span>
+                                    <h2>Alumno</h2>
+                                </div>
+                            </div>
+                            <!-- /menu profile quick info -->
+
+                            <br />
+
+                            <!-- sidebar menu -->
+                            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                                <div class="menu_section">
+                                    <h3>Lista de Menu</h3>
+                                    <ul class="nav side-menu">
+                                        <li><a><i class="fa fa-home"></i>Inicio{#<span class="fa fa-chevron-down"></span>#}</a>
+                                            {#<ul class="nav child_menu">
+                                                <li><a href="{{ path('inscripcion_homepage') }}">Manual de usuario</a></li>
+                                            </ul>#}
+                                        </li>
+                                    </ul>
+                                    <ul class="nav side-menu">
+                                        <li><a><i class="fa fa-user"></i>Mi información<span class="fa fa-chevron-down"></span></a>
+                                            <ul class="nav child_menu">
+{#                                                <li><a class="fa fa-user" href="{{ path('mi_perfil') }}">Mi perfil</a></li>#}
+                                                <li><a href="{{ path('historial_academico') }}">Historial académico</a></li>
+{#                                                <li><a href="{{ path('mi_perfil') }}">Formulario de datos</a></li>#}
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav side-menu">
+                                        <li><a><i class="fa fa-edit"></i>      Matrícula<span class="fa fa-chevron-down"></span></a>
+                                            <ul class="nav child_menu">
+                                                <li><a class="fa fa-user" {#href="{{ path('mi_perfil') }}"#}>Matrícula vía internet</a></li>
+                                                <li><a class="fa fa-user" href="{{ path('programacion_cursos') }}">Programación de cursos</a></li>                                                
+{#                                                                                                <li><a href="{{ path('inscripcion_interesado_lista') }}">Lista de Interesado</a></li>#}
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav side-menu">
+                                        <li><a><i class="fa fa-eye"></i>Reportes<span class="fa fa-chevron-down"></span></a>
+                                            <ul class="nav child_menu">
+                                                <li><a class="fa fa-user" href="{{ path('reporte_prematricula') }}">Reporte de pre-matrícula</a></li>
+                                                <li><a class="fa fa-user" {#href="{{ path('reporte_matricula') }}"#}>Reporte de matrícula</a></li>
+                                                {#<li><a class="fa fa-user" href="{{ path('mi_perfil') }}">Reporte de evaluaciones</a></li>#}
+                                                {#<li><a class="fa fa-user" href="{{ path('mi_perfil') }}">Reporte de deudas</a></li>#}
+{#                                                                                                <li><a href="{{ path('inscripcion_interesado_lista') }}">Lista de Interesado</a></li>#}
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav side-menu">
+                                        <li><a><i class="fa fa-list"></i>Plan de estudio<span {#class="fa fa-chevron-down"#}></span></a>
+                                                    {#<ul class="nav child_menu">                                                
+                                                        <li><a href="{{ path('inscripcion_interesado_lista') }}">Lista de Interesado</a></li>
+                                                    </ul>#}
+                                        </li>
+                                    </ul>
+                                    <ul class="nav side-menu">
+                                        <li><a><i class="fa fa-power-off"></i>Salir<span {#class="fa fa-chevron-down"#}></span></a>
+                                            {#<ul class="nav child_menu">
+                                                                                            <li><a href="{{ path('inscripcion_interesado_lista') }}">Lista de Interesado</a></li>
+                                            </ul>#}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /sidebar menu -->
+
+                            <!-- /menu footer buttons -->
+                            <div class="sidebar-footer hidden-small">
+                                {#<a data-toggle="tooltip" data-placement="top" title="Logout" href="{{ path('inscripcion_loginpage_login') }}">
+                                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                                </a>#}
+                            </div>
+                            <!-- /menu footer buttons -->
+                        </div>
+                    </div>
+
+                    <!-- top navigation -->
+                    <div class="top_nav">
+                        <div class="nav_menu">
+                            <nav>
+                                <div class="nav toggle">
+                                    <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                                </div>
+
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="">
+                                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-power-off"></i>SALIR
+                                            <span class=" fa fa-angle-down"></span>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                            {#                                        <li><a href="{{ path('inscripcion_loginpage_login') }}"><i class="fa fa-sign-out pull-right"></i>Cerrar Session</a></li>#}
+                                        </ul>
+                                    </li>
+
+                                    {#<li role="presentation" class="dropdown">
+                                        <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-envelope-o"></i>
+                                            <span class="badge bg-green">6</span>
+                                        </a>
+                                        <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                            <li>
+                                                <a>
+                                                    <span class="image"><img src="{{ asset('public/images/logo.png') }}" alt="Profile Image" /></span>
+                                                    <span>
+                              <span>John Smith</span>
+                              <span class="time">3 mins ago</span>
+                            </span>
+                                                    <span class="message">
+                              Film festivals used to be do-or-die moments for movie makers. They were where...
+                            </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <span class="image"><img src="{{ asset('public/images/logo.png') }}" alt="Profile Image" /></span>
+                                                    <span>
+                              <span>John Smith</span>
+                              <span class="time">3 mins ago</span>
+                            </span>
+                                                    <span class="message">
+                              Film festivals used to be do-or-die moments for movie makers. They were where...
+                            </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <span class="image"><img src="{{ asset('public/images/logo.png') }}" alt="Profile Image" /></span>
+                                                    <span>
+                              <span>John Smith</span>
+                              <span class="time">3 mins ago</span>
+                            </span>
+                                                    <span class="message">
+                              Film festivals used to be do-or-die moments for movie makers. They were where...
+                            </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <span class="image"><img src="{{ asset('public/images/logo.png') }}" alt="Profile Image" /></span>
+                                                    <span>
+                              <span>John Smith</span>
+                              <span class="time">3 mins ago</span>
+                            </span>
+                                                    <span class="message">
+                              Film festivals used to be do-or-die moments for movie makers. They were where...
+                            </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <div class="text-center">
+                                                    <a>
+                                                        <strong>See All Alerts</strong>
+                                                        <i class="fa fa-angle-right"></i>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>#}
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- /top navigation -->
+
+
+                    {% block content %}
+
+
+                    {% endblock %}
+                    <!-- footer content -->
+                    <footer>
+                        <div class="pull-right">
+                            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </footer>
+                    <!-- /footer content -->
+                </div>
+            </div>
+
+        {% endblock %}
+
+        {% block javascripts %}
+
+            <!-- jQuery -->
+            <script src="{{ asset('public/vendors/jquery/dist/jquery.min.js')}}"></script>
+            <!-- Bootstrap -->
+            <script src="{{ asset('public/vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+            <!-- FastClick -->
+            <script src="{{ asset('public/vendors/fastclick/lib/fastclick.js')}}"></script>
+
+            <!-- Chart.js -->
+            <script src="{{ asset('public/vendors/Chart.js/dist/Chart.min.js')}}"></script>
+            <!-- gauge.js -->
+            <script src="{{ asset('public/vendors/gauge.js/dist/gauge.min.js')}}"></script>
+            <!-- bootstrap-progressbar -->
+            <script src="{{ asset('public/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js')}}"></script>
+            <!-- iCheck -->
+            <script src="{{ asset('public/vendors/iCheck/icheck.min.js')}}"></script>
+            <!-- Skycons -->
+            <script src="{{ asset('public/vendors/skycons/skycons.js')}}"></script>
+            <!-- Flot -->
+            <script src="{{ asset('public/vendors/Flot/jquery.flot.js')}}"></script>
+            <script src="{{ asset('public/vendors/Flot/jquery.flot.pie.js')}}"></script>
+            <script src="{{ asset('public/vendors/Flot/jquery.flot.time.js')}}"></script>
+            <script src="{{ asset('public/vendors/Flot/jquery.flot.stack.js')}}"></script>
+            <script src="{{ asset('public/vendors/Flot/jquery.flot.resize.js')}}"></script>
+            <!-- Flot plugins -->
+            <script src="{{ asset('public/vendors/flot.orderbars/js/jquery.flot.orderBars.js')}}"></script>
+            <script src="{{ asset('public/vendors/flot-spline/js/jquery.flot.spline.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/flot.curvedlines/curvedLines.js')}}"></script>
+            <!-- DateJS -->
+            <script src="{{ asset('public/vendors/DateJS/build/date.js')}}"></script>
+            <!-- bootstrap-daterangepicker -->
+            <script src="{{ asset('public/vendors/moment/min/moment.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
+            <!-- Custom Theme Scripts -->
+            <script src="{{ asset('public/build/js/custom.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-buttons/js/buttons.flash.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
+            <script src="{{ asset('public/vendors/datatables.net-scroller/js/datatables.scroller.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/jszip/dist/jszip.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/pdfmake/build/pdfmake.min.js')}}"></script>
+            <script src="{{ asset('public/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
+        {% endblock %}
+
+    </body>
+</html>

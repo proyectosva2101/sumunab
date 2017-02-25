@@ -1,0 +1,12 @@
+inscripcion:
+    resource: "@InscripcionBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    
+inscripcion1:
+    resource: "@InscripcionBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
