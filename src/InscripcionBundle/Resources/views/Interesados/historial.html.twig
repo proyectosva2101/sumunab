@@ -17,221 +17,115 @@
             <div class="title_left">
                 <h3>HISTORIAL ACADÉMICO</h3>
             </div>
-
-            <div class="row">
-                <div class="clearfix"></div>
-                </br>
-                <div class="col-md-4 col-sm-6 col-xs-6">
-                    <div class="x_panel form-signin ">
-                        <div class="x_title">
-                            <h2>
-                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-user emerald-bg"></i></a>
-                                Información personal académica
-                            </h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li>
-                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
-                                </li>                               
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <div class="main-box infographic-box clearfix">
-                                {#<div class="main-box-header clearfix">
-                                    <a href="perfil.htm?s=inf"><i class="fa fa-user emerald-bg"></i></a>
-                                    <span class="headline">
-                                        <a> href="perfil.htm?s=inf">
-                                            Información Personal Académica
-                                        </a>
-                                    </span>
-                                </div>#}
-                                <div>
-                                    <p class="text-muted">Datos Registrados en la Base de Datos</p>                        
-                                    <ul>
-                                        <li>Nombre, Fecha y Lugar de Nacimiento, Estado Civil,Sexo</li>
-                                        <li>Domicilio, Teléfono y Correo Electrónico</li>
-                                        <li>Facultad, Programa Académico, Especialidad</li>
-{#                                        <li>Plan de Estudios, &nbsp;Año y Modalidad de Ingreso</li>#}
-{#                                        <li>Situación Académica y Estado de Permanencia</li>#}
-{#                                        <li>Promedio Ponderado, Número de Períodos Matriculados</li>#}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="panel-body">
+                <div class="row">
+                    <a target="_blank" title="Descargar PDF" {#onclick="verPDF('ReporteAlumnoNotas');"#}>
+                        <button class="btn btn-success pull-right">
+                            <i class="fa fa-file-pdf-o"></i> Descargar en PDF
+                        </button>
+                    </a>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-6">
-                    <div class="x_panel form-signin ">
-                        <div class="x_title">
-                            <h2>
-                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-bar-chart-o emerald-bg"></i></a>
-                                Historial académico y calificaciones
-                            </h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li>
-                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
-                                </li>                               
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <div class="main-box infographic-box clearfix">
-                                <div>
-                                    <p class="text-muted">Matrículas Registradas y Resumen de Creditaje Aprobado</p>
-                                    <ul>
-                                        <li>Períodos Académicos Matriculados, Plan de Estudios</li>
-                                        <li>Ciclo, Asignatura, Creditaje, Tipo Asignatura</li>
-                                        <li>Calificación, Sección, &nbsp;Tipo y Número de Acta</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <h4>
+                    <span class="label label-primary">Periodo Academico &nbsp;&nbsp;  2016-1</span>
+                </h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-condensed table-hover table-striped">    
+                        <thead>
+                            <tr class="info">
+                                <th class="text-center hidden-xs">Plan</th>
+                                <th class="text-center">Cic</th>
+                                <th class="text-center hidden-xs">Codigo</th>
+                                <th class="text-center">Tipo</th>
+                                <th class="text-center">Cred</th>
+                                <th class="text-center col-xs-2 col-md-5">Asignatura</th>
+                                <th class="text-center">Cal</th>
+                                <th class="text-center">Sec</th>
+                                <th class="text-center hidden-xs">Acta</th>             
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">2009  </td>
+                                <td class="text-center">7</td>
+                                <td class="text-center">207002  </td>
+                                <td class="text-center">O   </td>
+                                <td class="text-center">4.0</td>
+                                <td>REDES DE COMPUTADORAS</td>
+                                <td class="text-center"><span class="label label-danger">10</span></td>
+                                <td class="text-center">2</td>
+                                <td class="hidden-xs">P   -20161201200902070022P</td>
+                            </tr>
+                            <tr> 
+                                <td class="text-center">2009  </td>
+                                <td class="text-center">8</td>
+                                <td class="text-center">208008  </td>
+                                <td class="text-center">O   </td>
+                                <td class="text-center">2.0</td>
+                                <td>METODOLOGÍA PARA LA ELABORACIÓN DE TESIS</td>
+                                <td class="text-center"><span class="label label-primary">14<span></span></span></td>
+                                <td class="text-center">11</td>
+                                <td class="hidden-xs">P   -201612012009020800811P</td>
+                            </tr>
+                            <tr> 
+                                <td class="text-center">2009  </td>
+                                <td class="text-center">9</td>
+                                <td class="text-center">209001M </td>
+                                <td class="text-center">O   </td>
+                                <td class="text-center">3.0</td>
+                                <td>AUDITORÍA Y SEGURIDAD EN INFORMÁTICA</td>
+                                <td class="text-center"><span class="label label-primary">12<span></span></span></td>
+                                <td class="text-center">2</td>
+                                <td class="hidden-xs">P   -2016120120090209001M2P</td>
+                            </tr>
+                            <tr> 
+                                <td class="text-center">2009  </td>
+                                <td class="text-center">9</td>
+                                <td class="text-center">209003  </td>
+                                <td class="text-center">O   </td>
+                                <td class="text-center">2.0</td>
+                                <td>INGENIERIA DE NEGOCIOS</td>
+                                <td class="text-center"><span class="label label-primary">13<span></span></span></td>
+                                <td class="text-center">1</td>
+                                <td class="hidden-xs">P   -20161201200902090031P</td>
+                            </tr>
+                            <tr> 
+                                <td class="text-center">2009  </td>
+                                <td class="text-center">9</td>
+                                <td class="text-center">209005M </td>
+                                <td class="text-center">O   </td>
+                                <td class="text-center">2.0</td>
+                                <td>MARKETING</td>
+                                <td class="text-center"><span class="label label-danger">10</span></td>
+                                <td class="text-center">4</td>
+                                <td class="hidden-xs">P   -2016120120090209005M4P</td>
+                            </tr>
+                            <tr> 
+                                <td class="text-center">2009  </td>
+                                <td class="text-center">9</td>
+                                <td class="text-center">209006  </td>
+                                <td class="text-center">O   </td>
+                                <td class="text-center">2.0</td>
+                                <td>DERECHO INFORMÁTICO</td>
+                                <td class="text-center"><span class="label label-primary">11<span></span></span></td>
+                                <td class="text-center">2</td>
+                                <td class="hidden-xs">P   -20161201200902090062P</td>
+                            </tr>
+                            {#<script>
+                                ponderados.push({semestre: '2016-1', ponderado: parseFloat(11.466666666666667).toFixed(3)});
+                            </script>#}
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-6">
-                    <div class="x_panel form-signin ">
-                        <div class="x_title">
-                            <h2>
-                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-globe red-bg"></i></a>
-                                Matrícula vía internet
-                            </h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li>
-                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
-                                </li>                               
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <div class="main-box infographic-box clearfix">
-                                <div>
-                                    <p class="text-muted">Acceso al Módulo de Controles y Proceso de Matrícula</p>
-                                    <ul>
-                                        <li>Período Académico Vigente</li>
-                                        <li>Fecha, Usuario, Tipo de Matrícula</li>
-                                        <li>Ciclo/Año, Código, Nombre, Tipo Asignatura</li>
-                                        <li>Sección Matriculada, Docente</li>
-                                        <li>Total de Cursos y Créditos Matriculados</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <ul class="fa-ul">
+                        <li class="text-muted">*TIPO ASIGNATURA: O=obligatorio, E=electivo, L=libre</li>
+{#                        <li class="text-muted">*TIPO ATA: P=promocional, A=adicional, H=jurado ad-hoc, C=convalidación</li>#}
+                        <li class="text-muted">*LEYENDA: CRED=créditos, CAL= calificación, SEC=sección</li>
+                    </ul>
                 </div>
+                {#                <a target="_blank" title="Descargar PDF" onclick="verPDF('ReporteAlumnoNotas');"><button class="btn btn-success pull-right"><i class="fa fa-file-pdf-o"></i> Descargar en PDF</button></a>            #}
             </div>
-            <div class="row">
-                <div class="clearfix"></div>
-                </br>
-                <div class="col-md-4 col-sm-6 col-xs-6">
-                    <div class="x_panel form-signin ">
-                        <div class="x_title">
-                            <h2>
-                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-calendar red-bg"></i></a>
-                                Programación de cursos
-                            </h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li>
-                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
-                                </li>                               
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <div class="main-box infographic-box clearfix">
-                                <div>
-                                    <p class="text-muted">Asignaturas, Secciones y Horarios Programados</p>
-                                    <ul>
-                                        <li>Asignatura, Creditaje, Horas Teoría, Práctica, Laboratorio</li>
-                                        <li>Sección, Docente, Turno, Aula, Horario</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-6">
-                    <div class="x_panel form-signin ">
-                        <div class="x_title">
-                            <h2>
-                                <a {#href="perfil.htm?s=inf"#}><i class="fa fa-list yellow-bg"></i></a>
-                                Plan de estudios
-                            </h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li>
-                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
-                                </li>                               
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <div class="main-box infographic-box clearfix">
-                                <div>
-                                    <ul>
-                                        <li>Asignaturas, Creditaje y Especificaciones del Plan</li>
-                                        <li>Ciclo/Año, &nbsp;Código, Nombre, &nbsp;Tipo, Creditaje Asignatura</li>
-                                        <li>Código, Nombre Asignatura Pre-Requisito</li>
-                                        <li>Grupo</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            {#<div class="clearfix"></div>
-            <div class="row">
-                <div class="clearfix"></div>
-                </br>
-                <div class="col-md-2"></div>
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    <div class="x_panel form-signin ">
-                        <div class="x_title">
-                           <h2>Nuevo Interesado</h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li>
-                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>                                
-                                </li>                               
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <form>
-                            <form class="form-horizontal form-label-left" action="{{ path('inscripcion_interesado_add')}}" method="post">
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Nombres :</label>
-                                    <div class="col-md-6 col-sm-9 col-xs-12">
-                                        <input type="text" name="nombres" id="nombres" class="form-control" placeholder="Ingrese Nombre">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Apellidos :</label>
-                                    <div class="col-md-6 col-sm-9 col-xs-12">
-                                        <input type="text"  name="apellidos" id="apellidos" class="form-control"  placeholder="Ingrese Apellidos">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Correo :</label>
-                                    <div class="col-md-6 col-sm-9 col-xs-12">
-                                        <input type="email" name="correo" id="correo" class="form-control"  placeholder="Ingrese Correo">
-                                    </div>
-                                </div>
 
-
-                                <div class="ln_solid"></div>
-                                <div class="form-group">
-                                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                                        <button type="submit" class="btn btn-warning">Registrar</button>
-                                    </div>
-                                </div>
-
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-            </div>#}
 
         </div>
     </div>
